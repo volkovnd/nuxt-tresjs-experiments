@@ -8,6 +8,16 @@ export default defineNuxtConfig({
     enabled: true,
     telemetry: false
   },
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'shortcut icon',
+          href: `${import.meta.env.NUXT_APP_BASE_URL || '/'}favicon.ico`
+        }
+      ]
+    }
+  },
   compatibilityDate: '2025-05-15',
   telemetry: {
     enabled: false
