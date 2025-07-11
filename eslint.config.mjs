@@ -6,13 +6,15 @@ export default withNuxt([
     rules: {
       '@stylistic/object-curly-newline': [
         'error',
-        'always'
+        {
+          consistent: false,
+          minProperties: 2,
+          multiline: true
+        }
       ],
       '@stylistic/object-property-newline': [
         'error',
-        {
-          allowAllPropertiesOnSameLine: false
-        }
+        { allowAllPropertiesOnSameLine: false }
       ],
       '@stylistic/array-element-newline': [
         'error',

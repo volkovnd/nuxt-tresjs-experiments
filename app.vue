@@ -41,9 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import {
-  OrbitControls
-} from '@tresjs/cientos'
+import { OrbitControls } from '@tresjs/cientos'
 </script>
 
 <style>

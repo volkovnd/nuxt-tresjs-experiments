@@ -19,14 +19,10 @@ export default defineNuxtConfig({
     }
   },
   compatibilityDate: '2025-05-15',
-  telemetry: {
-    enabled: false
-  },
+  telemetry: { enabled: false },
   eslint: {
     config: {
-      nuxt: {
-        sortConfigKeys: true
-      },
+      nuxt: { sortConfigKeys: true },
       stylistic: {
         semi: false,
         arrowParens: true,
@@ -37,8 +33,5 @@ export default defineNuxtConfig({
       }
     }
   },
-  tres: {
-    devtools: true,
-    modules: []
-  }
+  tres: { devtools: true }
 })
