@@ -52,10 +52,11 @@ useHead({
   htmlAttrs: {
     lang: 'ru'
   },
+
   link: [
     {
       rel: 'shortcut icon',
-      href: '/favicon.ico'
+      href: `${import.meta.baseURL}favicon.ico`
     }
   ]
 })
