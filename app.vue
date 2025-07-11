@@ -46,18 +46,3 @@
     />
   </TresCanvas>
 </template>
-
-<script setup lang="ts">
-useHead({
-  htmlAttrs: {
-    lang: 'ru'
-  },
-
-  link: [
-    {
-      rel: 'shortcut icon',
-      href: `${import.meta.baseURL}favicon.ico`
-    }
-  ]
-})
-</script>
