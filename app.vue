@@ -3,46 +3,33 @@
     <TresCanvas
       window-size
       shadows
-      clear-color="#B8B8B8"
+      clear-color="#C8C8C8"
     >
       <TresPerspectiveCamera
-        :position="[0, 0, 8]"
-        :look-at="[0, 0, 0]"
+        :position="[0, 0.625, 15]"
+        :look-at="[0, 0.625, 0]"
       />
 
       <VCircle
-        :position="[-2.5, 1.25, 0]"
-        :rotation="[0, -Math.PI / 16, 0]"
-        color="blue"
+        v-for="(color, index) in ['blue', 'yellow', 'black', 'green', 'red']"
+        :key="index"
+        :position="[(index - 2) * 1.25, index % 2 === 0 ? 1.25 : 0, 0]"
+        :rotation="[0, (index % 2 === 0 ? -1 : 1) * Math.PI / 16, 0]"
+        :color="color"
       />
 
-      <VCircle
-        :position="[-1.25, 0, 0]"
-        :rotation="[0, Math.PI / 16, 0]"
-        color="yellow"
-      />
-
-      <VCircle
-        :position="[0, 1.25, 0]"
-        :rotation="[0, -Math.PI / 16, 0]"
-        color="black"
-      />
-
-      <VCircle
-        :position="[1.25, 0, 0]"
-        :rotation="[0, Math.PI / 16, 0]"
-        color="green"
-      />
-
-      <VCircle
-        :position="[2.5, 1.25, 0]"
-        :rotation="[0, -Math.PI / 16, 0]"
-        color="red"
-      />
+      <TresMesh
+        receive-shadow
+        :position="[0, 0, -10]"
+        :rotation="[-Math.PI / 4, 0, 0]"
+      >
+        <TresPlaneGeometry :args="[20, 20, 10, 10]" />
+        <TresMeshStandardMaterial color="#f7f7f7" />
+      </TresMesh>
 
       <TresDirectionalLight
         cast-shadow
-        :position="[0, 2, 5]"
+        :position="[0, 2, 2]"
         :intensity="1"
       />
     </TresCanvas>

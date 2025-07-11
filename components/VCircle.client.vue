@@ -5,7 +5,7 @@
     :rotation="rotation"
   >
     <TresTorusGeometry
-      :args="[1.1, 0.15, 16, 32]"
+      :args="[1.0875, 0.1625, 32, 32]"
     />
     <TresMeshToonMaterial
       :color="color"
@@ -14,11 +14,9 @@
 </template>
 
 <script lang="ts" setup>
-withDefaults(defineProps<{
+defineProps<{
   color: string
   position: [number, number, number]
   rotation?: [number, number, number]
-}>(), {
-  rotation: () => [0, 0, 0],
-})
+}>()
 </script>
