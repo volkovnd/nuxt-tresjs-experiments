@@ -7,7 +7,7 @@
     <TresTorusGeometry
       :args="[1.0875, 0.1625, 32, 32]"
     />
-    <TresMeshToonMaterial
+    <TresMeshLambertMaterial
       :color="color"
     />
   </TresMesh>

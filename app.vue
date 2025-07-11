@@ -10,6 +10,8 @@
         :look-at="[0, 0.625, 0]"
       />
 
+      <OrbitControls />
+
       <VCircle
         v-for="(color, index) in ['blue', 'yellow', 'black', 'green', 'red']"
         :key="index"
@@ -20,21 +22,29 @@
 
       <TresMesh
         receive-shadow
-        :position="[0, 0, -10]"
-        :rotation="[-Math.PI / 4, 0, 0]"
+        :position="[0, 0, -5]"
+        :rotation="[0, 0, 0]"
       >
         <TresPlaneGeometry :args="[20, 20, 10, 10]" />
-        <TresMeshStandardMaterial color="#f7f7f7" />
+        <TresMeshPhongMaterial
+          color="#f7f7f7"
+        />
       </TresMesh>
 
       <TresDirectionalLight
         cast-shadow
-        :position="[0, 2, 2]"
-        :intensity="1"
+        :position="[1, 3, 5]"
+        :intensity="1.5"
       />
     </TresCanvas>
   </div>
 </template>
+
+<script setup lang="ts">
+import {
+  OrbitControls
+} from '@tresjs/cientos'
+</script>
 
 <style>
 #main {
